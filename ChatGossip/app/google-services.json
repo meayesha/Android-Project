@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "172164420667",
+    "firebase_url": "https://chatgossip-c39c2.firebaseio.com",
+    "project_id": "chatgossip-c39c2",
+    "storage_bucket": "chatgossip-c39c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172164420667:android:cde9f65200dc55ae9d781e",
+        "android_client_info": {
+          "package_name": "edu.psu.aqp5794.chatgossip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172164420667-maqc6s5olcekhboks8kgfbaukck3pavu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.psu.aqp5794.chatgossip",
+            "certificate_hash": "669e250495b42e25be3d1b370b92cbfddea3f14c"
+          }
+        },
+        {
+          "client_id": "172164420667-cci4cm72mv4hgu17o2kqo394t4ficof7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAUcibSJHUX3d4vdjABNxn0iiftFp9Cfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172164420667-cci4cm72mv4hgu17o2kqo394t4ficof7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
