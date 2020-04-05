@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
-
+import androidx.preference.Preference.OnPreferenceClickListener;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.EditTextPreference;
