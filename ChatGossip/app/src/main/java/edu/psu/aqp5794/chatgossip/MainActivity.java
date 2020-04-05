@@ -7,16 +7,11 @@ import android.os.Bundle;
 import android.content.Intent;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import androidx.recyclerview.widget.RecyclerView;
-import android.util.Log;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -34,9 +29,9 @@ import androidx.fragment.app.FragmentActivity;
 //import edu.psu.mpg.gossip.Fragments.UsersFragment;
 //import edu.psu.mpg.gossip.Model.Chat;
 import edu.psu.aqp5794.chatgossip.Fragments.ChatsFragment;
+import edu.psu.aqp5794.chatgossip.Fragments.ProfileFragment;
 import edu.psu.aqp5794.chatgossip.Fragments.UsersFragment;
 import edu.psu.aqp5794.chatgossip.Model.User;
-import edu.psu.aqp5794.chatgossip.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -103,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
 //delete this later
         myAdapter=new ViewPagerAdapter(this);
         myAdapter.addFragment(new ChatsFragment(), "Chats");
-        myAdapter.addFragment(new UsersFragment(),"User");
+        myAdapter.addFragment(new UsersFragment(),"Users");
+       myAdapter.addFragment(new ProfileFragment(),"Profile");
         //viewPager.setOrientation(myAdapter.OREINTATION_VERTICAL);
         viewPager.setAdapter(myAdapter);
 
@@ -133,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 //                }
 //
 //                viewPagerAdapter.addFragment(new UsersFragment(), "Users");
-//                viewPagerAdapter.addFragment(new ProfileFragment(), "Profile");
+//                viewPagerAdapter.addFragment(new ProfileFragment(), "ProfileFragment");
 //
 //                viewPager.setAdapter(viewPagerAdapter);
 //
@@ -165,6 +161,9 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 // change this code beacuse your app will crash
                 startActivity(new Intent(MainActivity.this, StartActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+
+            case R.id.setting:
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                 return true;
         }
 
